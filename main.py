@@ -14,11 +14,11 @@ class UniLinRegression:
         self.max_x = np.max(x_train)
         self.x_train = x_train / self.max_x
         y_train = train[train_headerss[1]]
-        self.y_train = y_train / 1000
+        self.y_train = y_train / 10000
         x_test = test[test_headerss[0]]
         self.x_test = x_test / np.max(x_test)
         y_test = test[test_headerss[1]]
-        self.y_test = y_test / 1000
+        self.y_test = y_test / 10000
         self.m = self.x_train.shape[0]
 
     def compute_cost(self, X, Y, w, b):
@@ -103,13 +103,13 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--train_csvfile",
-        default="/home/narayana/learn/ml/lin_reg/data/train.csv",
+        default="data/train.csv",
         type=str,
         help="Pass path of the train csv file",
     )
     parser.add_argument(
         "--test_csvfile",
-        default="/home/narayana/learn/ml/lin_reg/data/test.csv",
+        default="data/test.csv",
         type=str,
         help="Pass path of the test csv file",
     )
