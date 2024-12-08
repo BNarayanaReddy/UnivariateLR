@@ -16,5 +16,5 @@ print(model, params, norm_x)
 
 test_input = 2500
 scaled_input = test_input / norm_x
-predicted_price = predict(scaled_input, *params) * 1000
+predicted_price = predict(scaled_input, *params) * 10000
 print("Expected Price : ", predicted_price)
